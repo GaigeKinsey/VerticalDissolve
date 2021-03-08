@@ -127,3 +127,27 @@ Received Import Request.
 Start importing Packages/com.unity.textmeshpro using Guid(cabaa672b0e3ee91fa7b6da4daab7970) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '45d17d5366f259c698d14ff00a7a1f5e') in 0.001416 seconds
   Import took 0.003571 seconds .
 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001470 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.37 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.686 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.38 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1501 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 77.9 MB.
+System memory in use after: 77.4 MB.
+
+Unloading 37 unused Assets to reduce memory usage. Loaded Objects now: 2007.
+Total: 1.724800 ms (FindLiveObjects: 0.149500 ms CreateObjectMapping: 0.043600 ms MarkObjects: 1.277600 ms  DeleteObjects: 0.253000 ms)
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
