@@ -204,15 +204,16 @@ Shader "AdultLink/HorizontalDissolve"
 			float yHeightOutput = ( ( _Wave1amplitude * sin( ( Noise210 + (( perlinNoiseOutput + offsetHeight.x )*_Wave1frequency + _Wave1offset) ) ) ) + offsetHeight.y + ( sin( ( (( offsetHeight.z + perlinNoiseOutput )*_Wave2Frequency + _Wave2offset) + Noise210 ) ) * _Wave2amplitude ) );
 			// I think that would be a change somewhere down here though
 			// Removed a bunch of subtraction of 0 for whatever reason
-			float temp_output_10_0 = (-1.0 + _Fill * (2.0) / (1.0));
-			float temp_output_12_0 = step( ( ((max( (float)0 , _Borderwidth )) * 0.1 / 1.0) + yHeightOutput ) , temp_output_10_0 );
+			float fillOffsetOutput = (-1.0 + _Fill * 2.0);
+			// Divided by 1 here, for what??? Removed
+			float colorOffset = step( ( (max( (float)0 , _Borderwidth ) * 0.1) + yHeightOutput ) , fillOffsetOutput );
 			// I think this changes whether the opacity changes from above or below the point on the wave.
-			float temp_output_228_0 = ( 1.0 - _Invertmask );
-			float temp_output_8_0 = step( yHeightOutput , temp_output_10_0 );
-			float ColorMask156 = ( ( temp_output_12_0 * temp_output_228_0 ) + ( _Invertmask * ( 1.0 - temp_output_8_0 ) ) );
+			float invertMaskOutput = ( 1.0 - _Invertmask );
+			float offsetAndSinHeightOutput = step( yHeightOutput , fillOffsetOutput );
+			float ColorMask156 = ( ( colorOffset * invertMaskOutput ) + ( _Invertmask * ( 1.0 - offsetAndSinHeightOutput ) ) );
 			float4 Rimlight167 = ( _Enablerimlight * ( _Rimlightcolor * fresnelNode94 * ColorMask156 ) );
 			float2 uv_Bordertexture = i.uv_texcoord * _Bordertexture_ST.xy + _Bordertexture_ST.zw;
-			float Border120 = ( temp_output_8_0 - temp_output_12_0 );
+			float Border120 = ( offsetAndSinHeightOutput - colorOffset );
 			float4 ColoredBorder169 = ( _Bordercolor * tex2D( _Bordertexture, uv_Bordertexture ) * Border120 );
 			float2 uv_TexCoord85 = i.uv_texcoord * _Emissiontextiling;
 			float2 panner82 = ( 1.0 * _Time.y * _Emissiontexspeed + uv_TexCoord85);
@@ -245,7 +246,7 @@ Shader "AdultLink/HorizontalDissolve"
 			o.Occlusion = Occlusion274.r;
 			o.Alpha = 1;
 			// This is where the mask is actually applied to dissolve the texture
-			float OpacityMask121 = ( ( temp_output_8_0 * temp_output_228_0 ) + ( ( 1.0 - temp_output_12_0 ) * _Invertmask ) );
+			float OpacityMask121 = ( ( offsetAndSinHeightOutput * invertMaskOutput ) + ( ( 1.0 - colorOffset ) * _Invertmask ) );
 			clip( OpacityMask121 - _Cutoff );
 		}
 
