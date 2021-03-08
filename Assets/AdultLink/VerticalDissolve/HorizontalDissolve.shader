@@ -238,7 +238,7 @@ Shader "AdultLink/HorizontalDissolve"
 			o.Emission = (((i.ASEVFace > 0) ? ((Rimlight167 + ColoredBorder169 + (ColorMask156 * Textures126))) : ((ColoredBorder169 + (_Tintinsidecolor * _Fillcolor * ColorMask156))))).rgb;
 			o.Specular = tex2D(_Specular, UVTilingOffset290).rgb;
 			o.Smoothness = _Smoothness;
-			o.Occlusion = tex2D(_Occlusion, UVTilingOffset290).r
+			o.Occlusion = tex2D(_Occlusion, UVTilingOffset290).r;
 			o.Alpha = 1;
 			// This is where the mask is actually created to dissolve the texture
 			float OpacityMask121 = ( ( offsetAndSinHeightOutput * invertMaskOutput ) + ( ( 1.0 - colorOffset ) * _Invertmask ) );
