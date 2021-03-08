@@ -197,6 +197,7 @@ Shader "AdultLink/HorizontalDissolve"
 			float3 ase_vertex3Pos = mul( unity_WorldToObject, float4( i.worldPos , 1 ) );
 			float3 Components205 = lerp(ase_vertex3Pos,ase_worldPos,_Worldcoordinates);
 			// Assigned this to a new variable then never used again, fixed that weirdness
+			//_Time.y is normal time, unity has weird built in functionality
 			float perlinNoise = snoise( ( _Noisescale * ( Components205 + ( _Noisespeed * _Time.y ) ) ) );
 			float perlinNoiseOutput = ( perlinNoise * _Layernoise );
 			float3 offsetHeight = Components205;
@@ -234,19 +235,14 @@ Shader "AdultLink/HorizontalDissolve"
 			float3 SecondaryEmissionTex128 = desaturateVar64;
 			float Activatesecondaryemission278 = _Activatesecondaryemission;
 			float4 Textures126 = ( ( _Activateemission * _Basecolor * BaseTex132 ) + ( float4( NoiseTex130 , 0.0 ) * float4( SecondaryEmissionTex128 , 0.0 ) * _Secondaryemissioncolor * _Noisetexopacity * Activatesecondaryemission278 ) );
-			float4 switchResult157 = (((i.ASEVFace>0)?(( Rimlight167 + ColoredBorder169 + ( ColorMask156 * Textures126 ) )):(( ColoredBorder169 + ( _Tintinsidecolor * _Fillcolor * ColorMask156 ) ))));
-			float4 Emission267 = switchResult157;
-			o.Emission = Emission267.rgb;
-			float4 Specular270 = tex2D( _Specular, UVTilingOffset290 );
-			float4 temp_output_271_0 = Specular270;
-			o.Specular = temp_output_271_0.rgb;
-			float temp_output_259_0 = _Smoothness;
-			o.Smoothness = temp_output_259_0;
-			float4 Occlusion274 = tex2D( _Occlusion, UVTilingOffset290 );
-			o.Occlusion = Occlusion274.r;
+			o.Emission = (((i.ASEVFace > 0) ? ((Rimlight167 + ColoredBorder169 + (ColorMask156 * Textures126))) : ((ColoredBorder169 + (_Tintinsidecolor * _Fillcolor * ColorMask156))))).rgb;
+			o.Specular = tex2D(_Specular, UVTilingOffset290).rgb;
+			o.Smoothness = _Smoothness;
+			o.Occlusion = tex2D(_Occlusion, UVTilingOffset290).r
 			o.Alpha = 1;
-			// This is where the mask is actually applied to dissolve the texture
+			// This is where the mask is actually created to dissolve the texture
 			float OpacityMask121 = ( ( offsetAndSinHeightOutput * invertMaskOutput ) + ( ( 1.0 - colorOffset ) * _Invertmask ) );
+			// This applies the mask
 			clip( OpacityMask121 - _Cutoff );
 		}
 
