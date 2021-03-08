@@ -9,6 +9,7 @@ Material:
   m_Name: TeleportedObject 1
   m_Shader: {fileID: 4800000, guid: 5b6a9ce32c9e7394294524118268c25c, type: 3}
   m_ShaderKeywords: _ACTIVATEEMISSION_ON _ACTIVATENEMISSIONSTUFF_ON _EMISSION _ENABLERIMLIGHT_ON
+    _INVERTMASK_ON
   m_LightmapFlags: 0
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -123,7 +124,7 @@ Material:
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _Enablerimlight: 1
-    - _Fill: 0.46882907
+    - _Fill: 0.624178
     - _FillPercentage: 0.77
     - _Fillpercentage: 0.7843285
     - _GlossMapScale: 1
@@ -153,11 +154,11 @@ Material:
     - _SrcBlend: 1
     - _Tintinsidecolor: 1
     - _UVSec: 0
-    - _Wave1amplitude: 0.024
-    - _Wave1frequency: 2.2
+    - _Wave1amplitude: 0.202
+    - _Wave1frequency: 2.4
     - _Wave1offset: 0
-    - _Wave2Frequency: 2.7
-    - _Wave2amplitude: 0.053
+    - _Wave2Frequency: 0
+    - _Wave2amplitude: 0.007
     - _Wave2offset: 0
     - _Weirdnoise: 0
     - _Worldcoordinates: 0

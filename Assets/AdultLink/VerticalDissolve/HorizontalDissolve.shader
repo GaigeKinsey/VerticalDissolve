@@ -183,10 +183,8 @@ Shader "AdultLink/HorizontalDissolve"
 
 		void surf( Input i , inout SurfaceOutputStandardSpecular o )
 		{
-			float2 uv_TexCoord288 = i.uv_texcoord * _Maintiling + _Mainoffset;
-			float2 UVTilingOffset290 = uv_TexCoord288;
-			float3 Normal265 = UnpackNormal( tex2D( _Normal, UVTilingOffset290 ) );
-			o.Normal = Normal265;
+			float2 UVTilingOffset290 = i.uv_texcoord * _Maintiling + _Mainoffset;
+			o.Normal = UnpackNormal(tex2D(_Normal, UVTilingOffset290));
 			float4 Albedo262 = tex2D( _Albedo, UVTilingOffset290 );
 			o.Albedo = Albedo262.rgb;
 			float3 ase_worldPos = i.worldPos;
@@ -194,13 +192,12 @@ Shader "AdultLink/HorizontalDissolve"
 			float3 ase_worldNormal = WorldNormalVector( i, float3( 0, 0, 1 ) );
 			float fresnelNdotV94 = dot( ase_worldNormal, ase_worldViewDir );
 			float fresnelNode94 = ( _Rimlightbias + _Rimlightscale * pow( 1.0 - fresnelNdotV94, _Rimlightpower ) );
-			float3 ase_vertex3Pos = mul( unity_WorldToObject, float4( i.worldPos , 1 ) );
-			float3 Components205 = lerp(ase_vertex3Pos,ase_worldPos,_Worldcoordinates);
+			float3 ase_vertex3Pos = mul( unity_WorldToObject, float4( i.worldPos.y, i.worldPos.x, i.worldPos.z, 1 ) );
+			float3 offsetHeight = lerp(ase_vertex3Pos,ase_worldPos,_Worldcoordinates);
 			// Assigned this to a new variable then never used again, fixed that weirdness
 			//_Time.y is normal time, unity has weird built in functionality
-			float perlinNoise = snoise( ( _Noisescale * ( Components205 + ( _Noisespeed * _Time.y ) ) ) );
+			float perlinNoise = snoise( ( _Noisescale * ( offsetHeight + ( _Noisespeed * _Time.y ) ) ) );
 			float perlinNoiseOutput = ( perlinNoise * _Layernoise );
-			float3 offsetHeight = Components205;
 			// This is where the Y height of that part of the dissolve comes from. Maybe covert to the X axis instead?
 			float yHeightOutput = ( ( _Wave1amplitude * sin( ( perlinNoise + (( perlinNoiseOutput + offsetHeight.x )*_Wave1frequency + _Wave1offset) ) ) ) + offsetHeight.y + ( sin( ( (( offsetHeight.z + perlinNoiseOutput )*_Wave2Frequency + _Wave2offset) + perlinNoise ) ) * _Wave2amplitude ) );
 			// I think that would be a change somewhere down here though
@@ -221,20 +218,15 @@ Shader "AdultLink/HorizontalDissolve"
 			float4 BaseTex132 = tex2D( _Emission, panner82 );
 			float2 uv_TexCoord88 = i.uv_texcoord * _Noisetextiling;
 			float2 panner89 = ( 1.0 * _Time.y * _Noisetexspeed + uv_TexCoord88);
-			float SecondaryEmissionNoiseDesaturation285 = _SecondaryEmissionNoiseDesaturation;
 			float3 desaturateInitialColor81 = tex2D( _Secondaryemissionnoise, panner89 ).rgb;
 			float desaturateDot81 = dot( desaturateInitialColor81, float3( 0.299, 0.587, 0.114 ));
-			float3 desaturateVar81 = lerp( desaturateInitialColor81, desaturateDot81.xxx, SecondaryEmissionNoiseDesaturation285 );
-			float3 NoiseTex130 = desaturateVar81;
+			float3 NoiseTex130 = lerp(desaturateInitialColor81, desaturateDot81.xxx, _SecondaryEmissionNoiseDesaturation);
 			float2 uv_TexCoord57 = i.uv_texcoord * _Secondaryemissiontiling;
 			float2 panner60 = ( 1.0 * _Time.y * _Secondaryemissionspeed + uv_TexCoord57);
-			float SecondaryEmissionDesaturation249 = _SecondaryEmissionDesaturation;
 			float3 desaturateInitialColor64 = tex2D( _Secondaryemission, panner60 ).rgb;
 			float desaturateDot64 = dot( desaturateInitialColor64, float3( 0.299, 0.587, 0.114 ));
-			float3 desaturateVar64 = lerp( desaturateInitialColor64, desaturateDot64.xxx, SecondaryEmissionDesaturation249 );
-			float3 SecondaryEmissionTex128 = desaturateVar64;
-			float Activatesecondaryemission278 = _Activatesecondaryemission;
-			float4 Textures126 = ( ( _Activateemission * _Basecolor * BaseTex132 ) + ( float4( NoiseTex130 , 0.0 ) * float4( SecondaryEmissionTex128 , 0.0 ) * _Secondaryemissioncolor * _Noisetexopacity * Activatesecondaryemission278 ) );
+			float3 desaturateVar64 = lerp( desaturateInitialColor64, desaturateDot64.xxx, _SecondaryEmissionDesaturation);
+			float4 Textures126 = ( ( _Activateemission * _Basecolor * BaseTex132 ) + ( float4( NoiseTex130 , 0.0 ) * float4(desaturateVar64, 0.0 ) * _Secondaryemissioncolor * _Noisetexopacity * _Activatesecondaryemission) );
 			o.Emission = (((i.ASEVFace > 0) ? ((Rimlight167 + ColoredBorder169 + (ColorMask156 * Textures126))) : ((ColoredBorder169 + (_Tintinsidecolor * _Fillcolor * ColorMask156))))).rgb;
 			o.Specular = tex2D(_Specular, UVTilingOffset290).rgb;
 			o.Smoothness = _Smoothness;
@@ -244,6 +236,10 @@ Shader "AdultLink/HorizontalDissolve"
 			float OpacityMask121 = ( ( offsetAndSinHeightOutput * invertMaskOutput ) + ( ( 1.0 - colorOffset ) * _Invertmask ) );
 			// This applies the mask
 			clip( OpacityMask121 - _Cutoff );
+			/*
+				So how i understand it, everything below or above (depending on if inverse is set) the sin output + current offset
+				is set to be fully opaque, and clip tests that.
+			*/
 		}
 
 		ENDCG

@@ -7,8 +7,9 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: PrintedObject 2
-  m_Shader: {fileID: 4800000, guid: 5b6a9ce32c9e7394294524118268c25c, type: 3}
-  m_ShaderKeywords: _ACTIVATEEMISSION_ON _ACTIVATENEMISSIONSTUFF_ON _EMISSION _ENABLERIMLIGHT_ON
+  m_Shader: {fileID: 4800000, guid: 3631430d7954f1840b51eac78d87b26a, type: 3}
+  m_ShaderKeywords: _ACTIVATEEMISSION_ON _ACTIVATENEMISSIONSTUFF_ON _ACTIVATESECONDARYEMISSION_ON
+    _EMISSION _ENABLERIMLIGHT_ON _TINTINSIDECOLOR_ON
   m_LightmapFlags: 0
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -123,7 +124,7 @@ Material:
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _Enablerimlight: 1
-    - _Fill: 34.73991
+    - _Fill: -5.882816
     - _FillPercentage: 0.77
     - _Fillpercentage: 5.6351495
     - _GlossMapScale: 1
@@ -170,7 +171,7 @@ Material:
     - _Bordercolor: {r: 1.65, g: 0.9966937, b: 0.1698529, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Direction: {r: 0, g: 1, b: 0, a: 0}
-    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 0}
     - _Emissiontexspeed: {r: 0, g: 0, b: 0, a: 0}
     - _Emissiontextiling: {r: 1, g: 1, b: 0, a: 0}
     - _Fillcolor: {r: 0.16176468, g: 0.056765288, b: 0.009515569, a: 1}

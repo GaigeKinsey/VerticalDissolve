@@ -138,11 +138,14 @@ Material:
     - _Rimlightbias: 0
     - _Rimlightpower: 3.5
     - _Rimlightscale: 1
+    - _SecondaryEmissionDesaturation: 0
+    - _SecondaryEmissionNoiseDesaturation: 0
     - _SecondarytexDesaturation: 0
     - _Smoothness: 0
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
+    - _Tintinsidecolor: 1
     - _UVSec: 0
     - _Wave1amplitude: 0
     - _Wave1frequency: 0
@@ -162,14 +165,21 @@ Material:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Direction: {r: 0, g: 1, b: 0, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _Emissiontexspeed: {r: 0, g: 0, b: 0, a: 0}
+    - _Emissiontextiling: {r: 1, g: 1, b: 0, a: 0}
     - _Fillcolor: {r: 0.30882353, g: 0.12089846, b: 0.03633218, a: 1}
     - _Foamcolor: {r: 1, g: 0.9724137, b: 0, a: 1}
     - _Foamtexspeed: {r: 0, g: 0, b: 0, a: 0}
     - _Foamtextiling: {r: 1, g: 1, b: 0, a: 0}
     - _Fresnelcolor: {r: 0.44117647, g: 0.86125755, b: 1, a: 1}
+    - _Mainoffset: {r: 0, g: 0, b: 0, a: 0}
+    - _Maintiling: {r: 1, g: 1, b: 0, a: 0}
     - _Noisecolor: {r: 0.15045653, g: 0, b: 0.9485294, a: 1}
     - _Noisespeed: {r: 0, g: -0.02, b: 0, a: 0}
     - _Noisetexspeed: {r: 0, g: 0, b: 0, a: 0}
     - _Noisetextiling: {r: 1, g: 1, b: 0, a: 0}
     - _Rimlightcolor: {r: 1, g: 0.5586207, b: 0, a: 1}
+    - _Secondaryemissioncolor: {r: 1, g: 0.9724137, b: 0, a: 1}
+    - _Secondaryemissionspeed: {r: 0, g: 0, b: 0, a: 0}
+    - _Secondaryemissiontiling: {r: 1, g: 1, b: 0, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
