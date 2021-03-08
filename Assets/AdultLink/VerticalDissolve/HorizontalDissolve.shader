@@ -196,12 +196,12 @@ Shader "AdultLink/HorizontalDissolve"
 			float fresnelNode94 = ( _Rimlightbias + _Rimlightscale * pow( 1.0 - fresnelNdotV94, _Rimlightpower ) );
 			float3 ase_vertex3Pos = mul( unity_WorldToObject, float4( i.worldPos , 1 ) );
 			float3 Components205 = lerp(ase_vertex3Pos,ase_worldPos,_Worldcoordinates);
-			float simplePerlin3D36 = snoise( ( _Noisescale * ( Components205 + ( _Noisespeed * _Time.y ) ) ) );
-			float Noise210 = simplePerlin3D36;
-			float perlinNoiseOutput = ( Noise210 * _Layernoise );
+			// Assigned this to a new variable then never used again, fixed that weirdness
+			float perlinNoise = snoise( ( _Noisescale * ( Components205 + ( _Noisespeed * _Time.y ) ) ) );
+			float perlinNoiseOutput = ( perlinNoise * _Layernoise );
 			float3 offsetHeight = Components205;
 			// This is where the Y height of that part of the dissolve comes from. Maybe covert to the X axis instead?
-			float yHeightOutput = ( ( _Wave1amplitude * sin( ( Noise210 + (( perlinNoiseOutput + offsetHeight.x )*_Wave1frequency + _Wave1offset) ) ) ) + offsetHeight.y + ( sin( ( (( offsetHeight.z + perlinNoiseOutput )*_Wave2Frequency + _Wave2offset) + Noise210 ) ) * _Wave2amplitude ) );
+			float yHeightOutput = ( ( _Wave1amplitude * sin( ( perlinNoise + (( perlinNoiseOutput + offsetHeight.x )*_Wave1frequency + _Wave1offset) ) ) ) + offsetHeight.y + ( sin( ( (( offsetHeight.z + perlinNoiseOutput )*_Wave2Frequency + _Wave2offset) + perlinNoise ) ) * _Wave2amplitude ) );
 			// I think that would be a change somewhere down here though
 			// Removed a bunch of subtraction of 0 for whatever reason
 			float fillOffsetOutput = (-1.0 + _Fill * 2.0);
