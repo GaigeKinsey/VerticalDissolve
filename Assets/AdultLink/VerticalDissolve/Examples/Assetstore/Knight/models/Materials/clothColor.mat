@@ -4,8 +4,9 @@
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_Name: clothColor
   m_Shader: {fileID: 4800000, guid: 5b6a9ce32c9e7394294524118268c25c, type: 3}
   m_ShaderKeywords: _INVERTMASK_ON _LAYERNOISE_ON _NORMALMAP _WORLDCOORDINATES_ON
@@ -130,7 +131,7 @@ Material:
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _Enablerimlight: 0
-    - _Fill: 0.44116947
+    - _Fill: 0.9579793
     - _Fillpercentage: 1.8599814
     - _Gloss: 0.79
     - _GlossMapScale: 1
@@ -147,7 +148,7 @@ Material:
     - _Replaceinsidecolor: 0
     - _Rimlightbias: 0
     - _Rimlightpower: 3.5
-    - _Rimlightscale: 0.4889547
+    - _Rimlightscale: 0.7655985
     - _SecondaryEmissionDesaturation: 0
     - _SecondaryEmissionNoiseDesaturation: 0
     - _Secondaryemission: 1
@@ -190,3 +191,4 @@ Material:
     - _Secondaryemissionspeed: {r: 0, g: 0, b: 0, a: 0}
     - _Secondaryemissiontiling: {r: 0, g: 0, b: 0, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
+  m_BuildTextureStacks: []

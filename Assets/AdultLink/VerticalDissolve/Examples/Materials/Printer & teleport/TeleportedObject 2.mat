@@ -4,12 +4,13 @@
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_Name: TeleportedObject 2
   m_Shader: {fileID: 4800000, guid: 5b6a9ce32c9e7394294524118268c25c, type: 3}
-  m_ShaderKeywords: _ACTIVATEEMISSION_ON _ACTIVATESECONDARYEMISSION_ON _EMISSION _ENABLERIMLIGHT_ON
-    _REPLACEINSIDECOLOR_ON
+  m_ShaderKeywords: _ACTIVATEEMISSION_ON _ACTIVATESECONDARYEMISSION_ON _EMISSION
+    _ENABLERIMLIGHT_ON _REPLACEINSIDECOLOR_ON
   m_LightmapFlags: 0
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -124,7 +125,7 @@ Material:
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _Enablerimlight: 1
-    - _Fill: 1.1324033
+    - _Fill: 1.1451426
     - _FillPercentage: 0.77
     - _Fillpercentage: 0.7843285
     - _GlossMapScale: 1
@@ -190,3 +191,4 @@ Material:
     - _Secondaryemissionspeed: {r: 0, g: 0, b: 0, a: 0}
     - _Secondaryemissiontiling: {r: 0, g: 0, b: 0, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
+  m_BuildTextureStacks: []

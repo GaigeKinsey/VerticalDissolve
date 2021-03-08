@@ -4,8 +4,9 @@
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_Name: Orb2
   m_Shader: {fileID: 4800000, guid: 5b6a9ce32c9e7394294524118268c25c, type: 3}
   m_ShaderKeywords: _ACTIVATEEMISSION_ON _ENABLERIMLIGHT_ON
@@ -118,7 +119,7 @@ Material:
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _Enablerimlight: 1
-    - _Fill: 1.3641725
+    - _Fill: -0.21443519
     - _Fillpercentage: 1.0335313
     - _GlossMapScale: 1
     - _Glossiness: 0.5
@@ -176,3 +177,4 @@ Material:
     - _Secondaryemissioncolor: {r: 1, g: 0.9724137, b: 0, a: 1}
     - _Secondaryemissionspeed: {r: 0, g: 0, b: 0, a: 0}
     - _Secondaryemissiontiling: {r: 0, g: 0, b: 0, a: 0}
+  m_BuildTextureStacks: []
