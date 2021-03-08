@@ -192,6 +192,7 @@ Shader "AdultLink/HorizontalDissolve"
 			float3 ase_worldNormal = WorldNormalVector( i, float3( 0, 0, 1 ) );
 			float fresnelNdotV94 = dot( ase_worldNormal, ase_worldViewDir );
 			float fresnelNode94 = ( _Rimlightbias + _Rimlightscale * pow( 1.0 - fresnelNdotV94, _Rimlightpower ) );
+			// Swapped x, y, and z to produce horizontal dissolve, finally!
 			float3 ase_vertex3Pos = mul( unity_WorldToObject, float4( i.worldPos.y, i.worldPos.x, i.worldPos.z, 1 ) );
 			float3 offsetHeight = lerp(ase_vertex3Pos,ase_worldPos,_Worldcoordinates);
 			// Assigned this to a new variable then never used again, fixed that weirdness

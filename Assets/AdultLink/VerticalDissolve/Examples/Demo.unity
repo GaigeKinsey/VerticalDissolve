@@ -132,8 +132,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13dd8656d4216c547814babeb7592056, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minValue: -8.28
-  maxValue: 39
+  minValue: -26
+  maxValue: 9
   autoUpdate: 0
   mat: {fileID: 2100000, guid: 7fe4d0caddd29e04e911a5a01ed52650, type: 2}
   fill: 0
