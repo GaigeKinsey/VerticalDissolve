@@ -1,0 +1,161 @@
+Using pre-set license
+Built from '2020.2/staging' branch; Version is '2020.2.6f1 (8a2143876886) revision 9052483'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Home; OS build 19041.804; Version 2004; 64bit' Language: 'en' Physical Memory: 32683 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+E:\UnityHub\Unity Editors\2020.2.6f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+E:/GitHub/VerticalDissolve
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+62807
+Successfully changed project path to: E:/GitHub/VerticalDissolve
+E:/GitHub/VerticalDissolve
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 33.71 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.2.6f1 (8a2143876886)
+[Subsystems] Discovering subsystems at path E:/UnityHub/Unity Editors/2020.2.6f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path E:/GitHub/VerticalDissolve/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 2070 SUPER (ID=0x1e84)
+    Vendor:   
+    VRAM:     8011 MB
+    Driver:   27.21.14.6140
+Initialize mono
+Mono path[0] = 'E:/UnityHub/Unity Editors/2020.2.6f1/Editor/Data/Managed'
+Mono path[1] = 'E:/UnityHub/Unity Editors/2020.2.6f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'E:/UnityHub/Unity Editors/2020.2.6f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56736
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: E:/UnityHub/Unity Editors/2020.2.6f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.000824 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 32.10 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.837 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.002191 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.44 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.741 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
+Refreshing native plugins compatible for Editor in 0.57 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1533 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 75.1 MB.
+System memory in use after: 75.2 MB.
+
+Unloading 41 unused Assets to reduce memory usage. Loaded Objects now: 1989.
+Total: 1.882300 ms (FindLiveObjects: 0.189200 ms CreateObjectMapping: 0.061300 ms MarkObjects: 1.562500 ms  DeleteObjects: 0.068600 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/AdultLink/VerticalDissolve/Examples/Assetstore/PostProcessing/Resources/Shaders/AmbientOcclusion.cginc
+  artifactKey: Guid(447591ee3d9d4204899be5fe25968ea0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AdultLink/VerticalDissolve/Examples/Assetstore/PostProcessing/Resources/Shaders/AmbientOcclusion.cginc using Guid(447591ee3d9d4204899be5fe25968ea0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '192ec8c1e4ae1a31d0c2d46e53cd0abc') in 0.034675 seconds
+  Import took 0.036904 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000237 seconds.
+  path: Assets/AdultLink/VerticalDissolve/Examples/Assetstore/PostProcessing/Resources/Shaders/ACES.cginc
+  artifactKey: Guid(b8d56fc3449f426408c23c723b58d7b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AdultLink/VerticalDissolve/Examples/Assetstore/PostProcessing/Resources/Shaders/ACES.cginc using Guid(b8d56fc3449f426408c23c723b58d7b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '710bdbde4e6b6c4aef9aa51e3a32d1ad') in 0.005386 seconds
+  Import took 0.007831 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001827 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.40 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.677 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.39 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1386 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 70.3 MB.
+System memory in use after: 70.4 MB.
+
+Unloading 92 unused Assets to reduce memory usage. Loaded Objects now: 1931.
+Total: 1.705500 ms (FindLiveObjects: 0.171600 ms CreateObjectMapping: 0.047500 ms MarkObjects: 1.447600 ms  DeleteObjects: 0.037600 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001770 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.43 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.698 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.43 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1386 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 68.6 MB.
+System memory in use after: 68.7 MB.
+
+Unloading 32 unused Assets to reduce memory usage. Loaded Objects now: 1933.
+Total: 2.578700 ms (FindLiveObjects: 0.150000 ms CreateObjectMapping: 0.051900 ms MarkObjects: 2.349200 ms  DeleteObjects: 0.026100 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 490.801194 seconds.
+  path: Assets/AdultLink/VerticalDissolve/Examples
+  artifactKey: Guid(973f6fb022f8695459e63c924c368072) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AdultLink/VerticalDissolve/Examples using Guid(973f6fb022f8695459e63c924c368072) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c593f19c5d0e60bae59ff745e857591a') in 0.006827 seconds
+  Import took 0.009007 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001671 seconds.
+  path: Assets/AdultLink/VerticalDissolve/Examples
+  artifactKey: Guid(973f6fb022f8695459e63c924c368072) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AdultLink/VerticalDissolve/Examples using Guid(973f6fb022f8695459e63c924c368072) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c593f19c5d0e60bae59ff745e857591a') in 0.001676 seconds
+  Import took 0.003659 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.063309 seconds.
+  path: Assets/AdultLink/VerticalDissolve/Examples/Demo.unity
+  artifactKey: Guid(baadaa72f4baf464a94db0d0a2e98103) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AdultLink/VerticalDissolve/Examples/Demo.unity using Guid(baadaa72f4baf464a94db0d0a2e98103) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ac23db210e3c1dc68c0712ec0ec610b7') in 0.010772 seconds
+  Import took 0.012729 seconds .
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
