@@ -148,7 +148,7 @@ Material:
     - _Wave1amplitude: 0
     - _Wave1frequency: 25
     - _Wave1offset: 0
-    - _Wave2Frequency: 25
+    - _Wave2Frequency: 24.3
     - _Wave2amplitude: 0.033
     - _Wave2offset: 0
     - _Worldcoordinates: 0
