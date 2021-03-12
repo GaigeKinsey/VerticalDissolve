@@ -4,8 +4,9 @@
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_Name: Orb1
   m_Shader: {fileID: 4800000, guid: 5b6a9ce32c9e7394294524118268c25c, type: 3}
   m_ShaderKeywords: _ACTIVATEEMISSION_ON _ENABLERIMLIGHT_ON
@@ -107,34 +108,34 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _Activateemission: 1
+    - _Activateemission: 0.84050727
     - _Activatenemissionstuff: 1
     - _Activatesecondaryemission: 1
     - _Baseopacity: 1
     - _BasetexDesaturation: 1
-    - _Borderwidth: 0.36
+    - _Borderwidth: 0.20134544
     - _BumpScale: 1
-    - _Cutoff: 0.5
+    - _Cutoff: 0.16798306
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
-    - _Enablerimlight: 1
-    - _Fill: 0.74608827
+    - _Enablerimlight: 0.2351408
+    - _Fill: 0.73683167
     - _Fillpercentage: 0.8534414
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
     - _Invertmask: 0
-    - _Layernoise: 0
+    - _Layernoise: 1.294899
     - _Metallic: 0
     - _Mode: 0
-    - _Noisescale: 0
+    - _Noisescale: 0.18521139
     - _Noisetexopacity: 1
     - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _Replaceinsidecolor: 1
-    - _Rimlightbias: 0
-    - _Rimlightpower: 3.5
-    - _Rimlightscale: 1
+    - _Rimlightbias: -1.9554062
+    - _Rimlightpower: -0.046167493
+    - _Rimlightscale: 0.17647624
     - _SecondaryEmissionDesaturation: 0
     - _SecondaryEmissionNoiseDesaturation: 0
     - _Secondaryemission: 1
@@ -143,36 +144,37 @@ Material:
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
-    - _Tintinsidecolor: 1
+    - _Tintinsidecolor: 0.41794044
     - _UVSec: 0
-    - _Wave1amplitude: 0
-    - _Wave1frequency: 25
-    - _Wave1offset: 0
-    - _Wave2Frequency: 25
-    - _Wave2amplitude: 0.033
-    - _Wave2offset: 0
+    - _Wave1amplitude: 0.023777723
+    - _Wave1frequency: 39.488846
+    - _Wave1offset: 4.9367695
+    - _Wave2Frequency: 43.912388
+    - _Wave2amplitude: 0.9579085
+    - _Wave2offset: 8.476122
     - _Worldcoordinates: 0
     - _ZWrite: 1
     - __dirty: 0
     m_Colors:
-    - _Basecolor: {r: 0.48171481, g: 0.09731828, b: 0.88235295, a: 1}
+    - _Basecolor: {r: 0.77145493, g: 0.15926254, b: 0.19598186, a: 1}
     - _Basetexspeed: {r: 0, g: 0, b: 0, a: 0}
     - _Basetextiling: {r: 0, g: 0, b: 0, a: 0}
-    - _Bordercolor: {r: 1.0273691, g: 0.68966895, b: 1.443, a: 1}
+    - _Bordercolor: {r: 0.55852085, g: 0.49547666, b: 0.9607209, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _Emissiontexspeed: {r: 0, g: 0, b: 0, a: 0}
     - _Emissiontextiling: {r: 1, g: 1, b: 0, a: 0}
-    - _Fillcolor: {r: 0.22826181, g: 0.08423443, b: 0.2794118, a: 1}
+    - _Fillcolor: {r: 0.2632224, g: 0.070444226, b: 0.3097046, a: 1}
     - _Foamcolor: {r: 1, g: 0.9724137, b: 0, a: 1}
     - _Foamtexspeed: {r: 0, g: 0, b: 0, a: 0}
     - _Foamtextiling: {r: 0, g: 0, b: 0, a: 0}
     - _Mainoffset: {r: 0, g: 0, b: 0, a: 0}
     - _Maintiling: {r: 1, g: 1, b: 0, a: 0}
-    - _Noisespeed: {r: 0, g: 0, b: 0, a: 0}
-    - _Noisetexspeed: {r: 0, g: 0, b: 0, a: 0}
+    - _Noisespeed: {r: -3.6010573, g: 0.3988167, b: 0.44569445, a: 1.3379235}
+    - _Noisetexspeed: {r: -0.5567589, g: 0.32138225, b: -0.29660356, a: 1.9794736}
     - _Noisetextiling: {r: 0, g: 0, b: 0, a: 0}
-    - _Rimlightcolor: {r: 0.69472593, g: 0.4852941, b: 1, a: 1}
+    - _Rimlightcolor: {r: 0.047641873, g: 0.63464105, b: 0.5001138, a: 1}
     - _Secondaryemissioncolor: {r: 1, g: 0.9724137, b: 0, a: 1}
     - _Secondaryemissionspeed: {r: 0, g: 0, b: 0, a: 0}
     - _Secondaryemissiontiling: {r: 0, g: 0, b: 0, a: 0}
+  m_BuildTextureStacks: []
