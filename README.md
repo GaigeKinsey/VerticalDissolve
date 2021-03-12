@@ -4,6 +4,11 @@
 
 This shader allows you to dissolve objects in a vertical fashion, and provides several parameters to create unique transitions.
 
+Along with the new unity version update, the shader has also been updated to allow for horizontal dissolve with the new HorizontalDissolve.cs file.
+
+If you would like to randomize either of the shaders, RandoMaterial.cs is a new script that will give random values to create unique and interesting
+materials for you to dissolve!
+
 It can be edited through [Amplify Shader Editor](http://amplify.pt/unity/amplify-shader-editor) and contributions to the project are always welcome!
 
 ---
