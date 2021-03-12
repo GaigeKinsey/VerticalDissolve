@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.07048297, g: 0.35369012, b: 0.97080356, a: 1}
+  m_IndirectSpecularColor: {r: 0.070477255, g: 0.35368454, b: 0.97080505, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -806,6 +806,7 @@ GameObject:
   - component: {fileID: 175058212}
   - component: {fileID: 175058214}
   - component: {fileID: 175058213}
+  - component: {fileID: 175058216}
   - component: {fileID: 175058215}
   m_Layer: 0
   m_Name: Orb_c11
@@ -895,6 +896,21 @@ MonoBehaviour:
   mat:
   - {fileID: 2100000, guid: a803fa8bb4fd03d46877a6385a4a1313, type: 2}
   phase: 0
+--- !u!114 &175058216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 175058211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5303fa0f8f802704b9c2ad2af36a97a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vDissolveMaterial: {fileID: 2100000, guid: a803fa8bb4fd03d46877a6385a4a1313, type: 2}
+  matMin: 0.15
+  matMax: 0.9
 --- !u!1 &218078911
 GameObject:
   m_ObjectHideFlags: 0
