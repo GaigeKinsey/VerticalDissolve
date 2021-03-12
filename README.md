@@ -8,7 +8,7 @@ It can be edited through [Amplify Shader Editor](http://amplify.pt/unity/amplify
 
 ---
 
-Project developed using **Unity 2017.4.8f1**. Please use this version if you are planning on contributing. You can work on your own branch and send a pull request with your changes.
+Project developed using **Unity 2017.4.8f1**. For projects requiring a later version of unity, the branch titled **2020.2.6f1** is built with all features in the Unity version of the same name. Please use this version if you are planning on contributing. You can work on your own branch and send a pull request with your changes.
 
 ---
 
